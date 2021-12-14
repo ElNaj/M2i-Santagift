@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+}
+.element {
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card-body {
+    width: 100%;
+}
+img {
+    width: 320px;
+    height: 310px;
+    border: 3px solid black;
+}
+a {
+    margin-right: 20px;
+}
