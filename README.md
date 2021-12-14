@@ -1,0 +1,1 @@
+# Liste des cadeaux de Noël secret. Le but de cet exercice est de mettre en place un projet complet avec Angular et SpringBoot. Nous allons prendre une architecture 3-tiers car elle est la plus simple et propose les meilleures performances.
