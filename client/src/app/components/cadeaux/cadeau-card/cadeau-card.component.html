@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="container">
+        <div class="element">
+            <img [src]="cadeau.img" alt="Pas d'image à afficher">
+        </div>
+        <div class="element">
+            <div class="card-body">
+                <h5 class="card-title"># {{ cadeau.id}} {{ cadeau.nom}}</h5>
+                <p class="card-text">Description : {{ cadeau.description}}</p>
+                <p class="card-text">Prix : {{ cadeau.prix}} €</p>
+                <a class="btn btn-secondary" routerLink="{{cadeau.siteMarchand}}">Site Marchand</a>
+                <a class="btn btn-danger" (click)="retirerCadeau()">Retirer</a>
+            </div>
+        </div>
+    </div>
+</div>
