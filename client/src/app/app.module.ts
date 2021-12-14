@@ -11,6 +11,7 @@ import { PageCadeauxComponent } from './pages/page-cadeaux/page-cadeaux.componen
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { CadeauFormComponent } from './pages/cadeau-form/cadeau-form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { CadeauFormComponent } from './pages/cadeau-form/cadeau-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

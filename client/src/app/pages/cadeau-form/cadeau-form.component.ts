@@ -27,7 +27,7 @@ export class CadeauFormComponent implements OnInit {
   }
 
   ajouterCadeau() {
-    
+    this.router.navigateByUrl("/page-cadeaux");
   }
 
 }
