@@ -15,11 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.santagift.santagift.models.Cadeau;
 import fr.santagift.santagift.services.CadeauService;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@CrossOrigin
-// @CrossOrigin(origins = "http://localhost:8080")
-@RequestMapping
-// @RequestMapping("api")
+@RequestMapping()
 public class CadeauxController {
 
     @Autowired

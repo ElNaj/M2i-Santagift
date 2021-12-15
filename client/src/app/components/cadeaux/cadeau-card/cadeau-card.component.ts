@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cadeau } from 'src/app/models/cadeau';
 
 @Component({
@@ -12,16 +13,16 @@ export class CadeauCardComponent implements OnInit {
   cadeau !: Cadeau;
 
   @Output()
-  retirerCadeauEvent = new EventEmitter<number>();
+  retirerCadeauEvent = new EventEmitter<string>();
   
-  constructor() { 
+  constructor(private router: Router) { 
   }
 
   ngOnInit(): void {
   }
 
   retirerCadeau() {
-    // this.retirerCadeauEvent.emit(this.cadeau.id);
+    this.retirerCadeauEvent.emit(this.cadeau.id);
   }
 
 }

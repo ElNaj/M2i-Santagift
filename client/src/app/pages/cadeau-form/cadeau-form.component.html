@@ -1,10 +1,9 @@
 <div class="card">
     <div class="card-header">
-      <h1>Formulaire pour enregister un chat</h1>
+      <h1>Formulaire pour ajouter un cadeau de Noël</h1>
     </div>
     <div class="card-body">
-        <!-- <form [formGroup]="cadeauForm" (ngSubmit)="ajouterCadeau()"> -->
-        <form>
+        <form [formGroup]="cadeauForm" (ngSubmit)="ajouterCadeau()">
             <h3>Cadeau :</h3>
             <label for="nom">Nom :
                 <input type="text" formControlName="nom">
@@ -16,7 +15,7 @@
                 <input type="text" formControlName="siteMarchand">
             </label>
             <p></p>
-             <button class="btn btn-success">Valider</button>
+             <button class="btn btn-success">Ajouter</button>
         </form>
     </div>
   </div>
