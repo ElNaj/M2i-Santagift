@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CadeauListComponent } from './components/cadeaux/cadeau-list/cadeau-list.component';
 import { CadeauFormComponent } from './pages/cadeau-form/cadeau-form.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { PageCadeauxComponent } from './pages/page-cadeaux/page-cadeaux.component';
+
 
 const routes: Routes = [
-  // { path : "home", component : HomeComponent} cadeau-list
-  { path : "page-cadeaux", component : PageCadeauxComponent},
-  { path : "cadeau-list", component : PageCadeauxComponent},
+  { path : "home", component : HomeComponent},
+  { path : "cadeaux", component : CadeauListComponent},
   { path : "cadeau-form", component : CadeauFormComponent},
-  { path : "**", component :  HomeComponent}
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path : "**", component :  NotFoundComponent}
 ];
 
 @NgModule({

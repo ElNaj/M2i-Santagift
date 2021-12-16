@@ -17,7 +17,7 @@ import fr.santagift.santagift.services.CadeauService;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping()
+@RequestMapping("cadeaux")
 public class CadeauxController {
 
     @Autowired
@@ -28,7 +28,7 @@ public class CadeauxController {
      * @return Liste de Cadeaux
      * @author Najim
      */
-    @GetMapping("/cadeaux")
+    @GetMapping()
     public List<Cadeau> findAll() {
         return this.service.findAll();
     }
@@ -40,7 +40,7 @@ public class CadeauxController {
      * @return Cadeau enregistré
      * @author Najim
      */
-    @PostMapping("/cadeaux")
+    @PostMapping()
     public Cadeau create(@RequestBody Cadeau cadeau) {
         return this.service.save(cadeau);
     }
@@ -51,7 +51,7 @@ public class CadeauxController {
      * Prend un id en paramètre 
      * @author Najim
      */
-    @DeleteMapping("/cadeaux/{id}")
+    @DeleteMapping("/{id}")
     public void deleteById(@PathVariable("id") String id) {
         this.service.deleteById(id);
     }
