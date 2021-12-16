@@ -29,7 +29,7 @@ export class CadeauFormComponent implements OnInit {
 
   ajouterCadeau() {
     this.service.create(this.cadeauForm.value).subscribe(() => {
-      this.router.navigateByUrl("/page-cadeaux");
+      this.router.navigateByUrl("/cadeaux");
     }, err => {
       alert(err);
     }) 

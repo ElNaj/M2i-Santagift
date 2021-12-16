@@ -1,5 +1,4 @@
-<p>cadeau-list works!
+<ng-container *ngFor="let cadeau of cadeaux">
+    <app-cadeau-card [cadeau]="cadeau" (retirerCadeauEvent)="supprimerCadeau($event)"></app-cadeau-card>
+</ng-container>
 
-    Boucle for ici code de pages cadeaux
-    Et dans pages cadeaux faire appeler app list 
-</p>
