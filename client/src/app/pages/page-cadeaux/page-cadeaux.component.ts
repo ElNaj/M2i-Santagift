@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Cadeau } from 'src/app/models/cadeau';
-import { CadeauxHTTPService } from 'src/app/services/cadeaux-http.service';
 
 @Component({
   selector: 'app-page-cadeaux',
@@ -9,24 +7,10 @@ import { CadeauxHTTPService } from 'src/app/services/cadeaux-http.service';
 })
 export class PageCadeauxComponent implements OnInit {
 
-  cadeaux : Cadeau[] = [];
-
-  constructor(private service : CadeauxHTTPService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.initCadeaux();
-  }
 
-  initCadeaux(){
-    this.service.getAll().subscribe(data => {
-      this.cadeaux = data;
-    })
-  }
-
-  supprimerCadeau(id : string) {
-    this.service.delete(id).subscribe(() => {
-      this.initCadeaux();
-    })
   }
 
 }
