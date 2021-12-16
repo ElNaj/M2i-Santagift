@@ -5,8 +5,9 @@
         </div>
         <div class="element">
             <div class="card-body">
-                <h5 class="card-title"># {{ cadeau.id}} {{ cadeau.nom}}</h5>
-                <a class="btn btn-secondary" routerLink="{{cadeau.siteMarchand}}">Site Marchand</a>
+                <h5 class="card-title">#{{cadeau.nom}}</h5>
+                <!-- <a class="btn btn-secondary" href="{{cadeau.siteMarchand}}">Site Marchand</a> -->
+                <a class="btn btn-secondary" href="{{cadeau.siteMarchand}}" target="_blank">Site Marchand</a>
                 <a class="btn btn-danger" (click)="retirerCadeau()">Retirer</a>
             </div>
         </div>

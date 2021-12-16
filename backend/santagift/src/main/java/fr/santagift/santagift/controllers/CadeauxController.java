@@ -15,11 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.santagift.santagift.models.Cadeau;
 import fr.santagift.santagift.services.CadeauService;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@CrossOrigin
-// @CrossOrigin(origins = "http://localhost:8080")
-@RequestMapping
-// @RequestMapping("api")
+@RequestMapping()
 public class CadeauxController {
 
     @Autowired
@@ -47,6 +45,12 @@ public class CadeauxController {
         return this.service.save(cadeau);
     }
 
+    /**
+     * Route DELETE supprimant un cadeau par son id
+     * @param id 
+     * Prend un id en paramètre 
+     * @author Najim
+     */
     @DeleteMapping("/cadeaux/{id}")
     public void deleteById(@PathVariable("id") String id) {
         this.service.deleteById(id);
