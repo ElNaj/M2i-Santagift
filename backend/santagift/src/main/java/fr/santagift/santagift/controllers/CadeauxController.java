@@ -45,6 +45,12 @@ public class CadeauxController {
         return this.service.save(cadeau);
     }
 
+    /**
+     * Route DELETE supprimant un cadeau par son id
+     * @param id 
+     * Prend un id en paramètre 
+     * @author Najim
+     */
     @DeleteMapping("/cadeaux/{id}")
     public void deleteById(@PathVariable("id") String id) {
         this.service.deleteById(id);
